@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate ()
 	{
 //		float moveHorizontal = Input.GetAxis ("Horizontal");	// keyboard control
-		float moveHorizontal = Input.acceleration.x * 5.0f;	// Google Glass accelerometer control
+		float moveHorizontal = Input.acceleration.x * 2.5f;	// Google Glass accelerometer control
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);

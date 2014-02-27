@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
 				// count to 5 seconds then restart the level
 				if ((int)timeSeconds - deathCounter > 5)
 				{
-					Application.LoadLevel(Application.loadedLevel);
+					Application.LoadLevel(0);
 				}
 			}
 		}
@@ -97,9 +97,9 @@ public class GameController : MonoBehaviour
 				killScreen = true;
 			}
 
-			// 50 max speed for google glass; goes from 0 to 50 in 5 seconds
-			gameSpeed = Mathf.Lerp(0.0f, 50.0f, Mathf.InverseLerp (0.0f, 5.0f, gameTime));
-			gameSpeed = Mathf.Clamp (gameSpeed, 0, 50);
+			// 50 max speed for google glass; goes from 0 to 70 in 10 seconds
+			gameSpeed = Mathf.Lerp(0.0f, 70.0f, Mathf.InverseLerp (0.0f, 10.0f, gameTime));
+			gameSpeed = Mathf.Clamp (gameSpeed, 0, 70);
 
 			// update our game time during play
 			gameTime += Time.deltaTime;
